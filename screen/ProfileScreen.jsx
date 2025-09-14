@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import './profileScreen.css'
+import './profileScreen.css';
+import { useNavigate } from "react-router-dom";
 
 function ProfileScreen() {
   const user = JSON.parse(localStorage.getItem("user")) || { username: "Guest" };
   const [savedQuotes, setSavedQuotes] = useState([]);
+  const navigator = useNavigate();
 
   useEffect(() => {
     document.title = "Profile";
@@ -28,7 +30,7 @@ function ProfileScreen() {
           <li>No saved quotes</li>
         )}
       </ul>
-      <button className="return-button" onClick={() => window.location.href = "/"}>Return</button>
+      <button className="return-button" onClick={() => navigator("/")}>Return</button>
     </div>
   );
 }
