@@ -1,7 +1,9 @@
-![Capture](https://github.com/user-attachments/assets/259c5bec-c2b2-4cec-991a-3a0396d575d3)
-![register](https://github.com/user-attachments/assets/5185f9ff-b531-4a99-a6d2-b85794634f7e)
-![login](https://github.com/user-attachments/assets/e6ff0fbb-afd6-4e92-8a0d-5333bdb3e8cf)
-![logged](https://github.com/user-attachments/assets/5f1206f7-fd49-493e-97ea-5de70722bb67)
+![cap1](https://github.com/user-attachments/assets/c4798d0a-9c73-4140-ade3-faf72a81abf4)
+![register](https://github.com/user-attachments/assets/e8d233eb-4f50-43af-b3ba-020a31f324bd)
+![login](https://github.com/user-attachments/assets/e93ba8d1-6723-4ca1-b113-a64a2ec3bd47)
+![main](https://github.com/user-attachments/assets/795fb5c1-de2f-4d85-990b-2fc5e8c97a22)
+![profile](https://github.com/user-attachments/assets/243f50ae-e44c-4234-8b76-bc0aaafdabdf)
+
 
 🌟 Daily Quote App - MERN Stack Implementation
 
@@ -12,7 +14,7 @@ A beautifully designed MERN stack application that delivers inspirational quotes
 
     📜 Curated Daily Quotes - inspirational quotes that rotate automatically
 
-    💖 Interactive Experience - Like/dislike functionality with user-specific tracking
+    💖 Saving Experience - Save functionality with Quote-specific tracking
 
     ⏰ Automatic Updates - New quote delivered every 24 hours
 
@@ -73,8 +75,9 @@ JWT_SECRET=your_super_secret_jwt_key_here
 
     Registration/Login: Clean forms with validation
 
-    Dashboard: Display current quote with like/dislike buttons
+    Dashboard: Display current quote with Save button
 
+    Profile Page : Displayes the Saved Quotes
 
 ⚙️ Configuration Notes
 
