@@ -23,15 +23,27 @@ const Quotes = () => {
       });
   }, []);
 
-  const handleSaveQuote = () => {
+  const handleSaveQuote = async () => {
     const user = JSON.parse(localStorage.getItem("user")) || { username: "Guest" };
-    if (!user.savedQuotes) user.savedQuotes = [];
-    if (!user.savedQuotes.includes(quote)) {
-      user.savedQuotes.push(quote);
-      localStorage.setItem("user", JSON.stringify(user));
-      alert("Quote saved!");
-    } else {
-      alert("Quote already saved!");
+    if (user.username === "Guest") {
+      alert("Please sign in to save quotes.");
+      return;
+    }
+    try {
+      const response = await fetch("http://localhost:5100/api/save-quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username: user.username, quote }),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        alert("Quote saved!");
+      } else {
+        alert(data.message || "Failed to save quote.");
+      }
+    } catch (err) {
+      console.error("Error saving quote:", err);
+      alert("Error saving quote.");
     }
   };
 

@@ -9,7 +9,7 @@ const PORT = 5100;
 app.use(express.json());
 app.use(cors());
 
-const MONGODB_URI =  "mongodb+srv://<username>:<password>@cluster0.xxxxxxx.mongodb.net/<dbname>?retryWrites=true&w=majority";
+const MONGODB_URI =  "mongodb+srv://idrisregg:16134175@cluster0.4hprq6m.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
@@ -171,6 +171,46 @@ app.get("/test", (req, res) => {
     timestamp: new Date().toISOString(),
     database: mongoose.connection.readyState === 1 ? "Connected" : "Disconnected"
   });
+});
+
+// Save quote for user
+app.post("/api/save-quote", async (req, res) => {
+  const { username, quote } = req.body;
+  if (!username || !quote) {
+    return res.status(400).json({ message: "Username and quote are required" });
+  }
+  try {
+    const user = await User.findOne({ username });
+    if (!user) return res.status(404).json({ message: "User not found" });
+
+    if (user.savedQuotes.includes(quote)) {
+      return res.status(400).json({ message: "Quote already saved" });
+    }
+
+    user.savedQuotes.push(quote);
+    await user.save();
+    res.json({ message: "Quote saved successfully", savedQuotes: user.savedQuotes });
+  } catch (err) {
+    console.error("Error saving quote:", err);
+    res.status(500).json({ message: "Internal server error" });
+  }
+});
+
+// Get saved quotes for user
+app.get("/api/get-saved-quotes", async (req, res) => {
+  const { username } = req.query;
+  if (!username) {
+    return res.status(400).json({ message: "Username is required" });
+  }
+  try {
+    const user = await User.findOne({ username });
+    if (!user) return res.status(404).json({ message: "User not found" });
+
+    res.json({ savedQuotes: user.savedQuotes });
+  } catch (err) {
+    console.error("Error fetching saved quotes:", err);
+    res.status(500).json({ message: "Internal server error" });
+  }
 });
 
 app.use((err, req, res, next) => {
