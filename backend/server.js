@@ -9,7 +9,7 @@ const PORT = 5100;
 app.use(express.json());
 app.use(cors());
 
-const MONGODB_URI =  "mongodb+srv://idrisregg:16134175@cluster0.4hprq6m.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const MONGODB_URI =  "mongodb+srv://myUser:myPass@cluster0.mongodb.net/myDatabase?retryWrites=true&w=majority";
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
