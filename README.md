@@ -84,7 +84,7 @@ JWT_SECRET=your_super_secret_jwt_key_here
 
     Set a strong JWT secret for production environments
 
-    The quotes.json file contains 24 inspirational quotes that cycle daily
+    The quotes.json file contains 365 inspirational quotes that cycle daily
 
     User passwords are securely hashed using bcrypt before storage
 
