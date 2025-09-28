@@ -90,7 +90,7 @@ JWT_SECRET=your_super_secret_jwt_key_here
 
 🚦 Development Scripts
 
-> npm start
+> npm run start
 
 > #Runs both frontend and backend concurrently
 
@@ -105,20 +105,6 @@ JWT_SECRET=your_super_secret_jwt_key_here
     Input validation and sanitization
 
     CORS configuration
-
-🤝 Contributing
-
-    Fork the repository
-
-    Create a feature branch (git checkout -b feature/amazing-feature)
-
-    Commit your changes (git commit -m 'Add amazing feature')
-
-    Push to the branch (git push origin feature/amazing-feature)
-
-    Open a Pull Request
-
-🆘 Support
 
 If you encounter any issues or have questions:
 
