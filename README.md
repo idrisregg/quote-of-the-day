@@ -37,7 +37,7 @@ Prerequisites
 
     Node.js (v14 or higher)
 
-    MongoDB Atlas account or local MongoDB installation
+    MongoDB Atlas account
 
     Git
 
