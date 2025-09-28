@@ -112,6 +112,4 @@ If you encounter any issues or have questions:
 
     Verify your MongoDB connection string
 
-    Verify the Server Port Matches the Front-end
-
     Ensure all environment variables are properly set
