@@ -47,9 +47,8 @@ cd daily-quote-app
 
 2. Install Dependencies
 
->npm init
 
->npm creat vite@latest
+>npm install
 
 >npm install express
 
