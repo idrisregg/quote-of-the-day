@@ -1,0 +1,49 @@
+$signup-btn-bg: #9e8686;
+$signup-btn-border: #000000;
+$signup-btn-font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$signup-btn-font-size: 1rem;
+$signup-btn-font-weight: 700;
+$signup-btn-padding: 0.75rem 1.65rem;
+$signup-btn-line-height: 1.75rem;
+
+.signup-button {
+  background-color: $signup-btn-bg;
+  border: 0 solid #E5E7EB;
+  box-sizing: border-box;
+  color: $signup-btn-border;
+  display: flex;
+  font-family: $signup-btn-font-family;
+  font-size: $signup-btn-font-size;
+  font-weight: $signup-btn-font-weight;
+  justify-content: center;
+  line-height: $signup-btn-line-height;
+  padding: $signup-btn-padding;
+  text-align: center;
+  text-decoration: none $signup-btn-border solid;
+  text-decoration-thickness: auto;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    border: 1px solid $signup-btn-border;
+    bottom: 4px;
+    left: 4px;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+  }
+
+  &:hover:after {
+    bottom: 2px;
+    left: 2px;
+  }
+}

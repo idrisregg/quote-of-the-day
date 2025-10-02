@@ -1,5 +1,5 @@
 import React from "react";
-import './saveQuote.css'
+import './saveQuote.scss'
 
 function SaveQuote({ onSave }) {
  

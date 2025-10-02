@@ -1,4 +1,4 @@
-import './App.css'
+import './App.scss'
 import Login from '../components/login'
 import Quotes from '../components/quotes.jsx'
 import '../backend/data/quotes.json'

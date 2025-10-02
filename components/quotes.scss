@@ -1,0 +1,14 @@
+$span-color: #00545f;
+$span-font-family: "Playwrite AU NSW", cursive;
+$span-font-size: 60px;
+$span-font-weight: 400;
+
+span {
+  color: $span-color;
+  font-family: $span-font-family;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: $span-font-weight;
+  font-size: $span-font-size;
+  user-select: none;
+}

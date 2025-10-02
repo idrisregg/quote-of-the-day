@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import './profileScreen.css';
+import './profileScreen.scss';
 import { useNavigate } from "react-router-dom";
 
 function ProfileScreen() {

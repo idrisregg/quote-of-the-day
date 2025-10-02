@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./registerScreen.css";
+import "./registerScreen.scss";
 import { useNavigate } from "react-router-dom";
 
 const RegisterScreen = () => {

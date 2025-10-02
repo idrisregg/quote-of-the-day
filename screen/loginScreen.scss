@@ -1,0 +1,50 @@
+$bg-color: #f0f8ff;
+$primary-color: #00545f;
+$input-border: #ccc;
+$font-family: "Arial", sans-serif;
+$button-font-size: 16px;
+
+.login-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: $bg-color;
+
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-family: $font-family;
+  }
+
+  input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 250px;
+    border: 1px solid $input-border;
+    border-radius: 5px;
+  }
+
+  button {
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: $button-font-size;
+    font-family: $font-family;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $bg-color;
+    padding: 20px;
+    border-radius: 10px;
+  }
+}

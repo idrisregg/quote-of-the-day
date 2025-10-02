@@ -1,0 +1,21 @@
+$save-btn-bg: #4CAF50;
+$save-btn-hover-bg: #789f7a;
+$save-btn-color: white;
+$save-btn-padding: 10px 20px;
+$save-btn-font-size: 16px;
+$save-btn-border-radius: 5px;
+
+.save-quote-button {
+  margin-top: 20px;
+  background-color: $save-btn-bg;
+  color: $save-btn-color;
+  border: none;
+  padding: $save-btn-padding;
+  cursor: pointer;
+  border-radius: $save-btn-border-radius;
+  font-size: $save-btn-font-size;
+
+  &:hover {
+    background-color: $save-btn-hover-bg;
+  }
+}
