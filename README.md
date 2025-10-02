@@ -22,7 +22,7 @@ A beautifully designed MERN stack application that delivers inspirational quotes
 
 🛠️ Technology Stack
 
-    Frontend: React, React Router DOM, modern CSS
+    Frontend: React, React Router DOM, SASS(SCSS)
 
     Backend: Node.js, Express.js
 
