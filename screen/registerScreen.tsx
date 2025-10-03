@@ -47,7 +47,7 @@ const RegisterScreen = () => {
     navigate('/login');
   }
 
-  const handleRegister = async (e) => {
+  const handleRegister = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
     setMessage("");

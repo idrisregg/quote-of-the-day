@@ -3,7 +3,7 @@ import './profileScreen.scss';
 import { useNavigate } from "react-router-dom";
 
 function ProfileScreen() {
-  const user = JSON.parse(localStorage.getItem("user")) || { username: "Guest" };
+  const user = JSON.parse(localStorage.getItem("user") || '{ username: "Guest" }');
   const [savedQuotes, setSavedQuotes] = useState([]);
   const navigator = useNavigate();
 

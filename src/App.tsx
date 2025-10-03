@@ -1,14 +1,14 @@
 import './App.scss'
-import Login from '../components/login.js'
-import Quotes from '../components/quotes.jsx'
+import Login from '../components/login.tsx'
+import Quotes from '../components/quotes.tsx'
 import '../backend/data/quotes.json'
 import { useState, useEffect } from 'react'
-import Signup from '../components/Signup'
+import Signup from '../components/Signup.tsx'
 import { useNavigate } from 'react-router-dom'
 import SaveQuote from '../components/saveQuote.tsx'
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState<{username: string} | null>(null);
   const navigate = useNavigate();
 
   useEffect(() => {
