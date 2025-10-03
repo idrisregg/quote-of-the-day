@@ -1,7 +1,7 @@
 import React from "react";
 import './saveQuote.scss'
 
-function SaveQuote({ onSave }) {
+function SaveQuote({ onSave }: any) {
  
   return (
     <div className="save-quote">

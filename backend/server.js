@@ -9,7 +9,7 @@ const PORT = 5100;
 app.use(express.json());
 app.use(cors());
 
-const MONGODB_URI =  "mongodb+srv://<userName>:<pass>@cluster[].mongodb.net/?retryWrites=true&w=majority&appName=";
+const MONGODB_URI =  "mongodb+srv://<username>:<pass>@cluster0.cc.mongodb.net/?retryWrites=true&w=majority&appName=dd";
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
@@ -173,7 +173,6 @@ app.get("/test", (req, res) => {
   });
 });
 
-// Save quote for user
 app.post("/api/save-quote", async (req, res) => {
   const { username, quote } = req.body;
   if (!username || !quote) {
@@ -196,7 +195,6 @@ app.post("/api/save-quote", async (req, res) => {
   }
 });
 
-// Get saved quotes for user
 app.get("/api/get-saved-quotes", async (req, res) => {
   const { username } = req.query;
   if (!username) {
