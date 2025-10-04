@@ -9,7 +9,7 @@ const PORT = 5100;
 app.use(express.json());
 app.use(cors());
 
-const MONGODB_URI =  "mongodb+srv://<user>:<pass>@cluster0.dd.mongodb.net/?retryWrites=true&w=majority&appName=xx";
+const MONGODB_URI =  "mongodb+srv://<user>:<pass>@cluster0.xx.mongodb.net/?retryWrites=true&w=majority&appName=d";
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
@@ -210,6 +210,33 @@ app.get("/api/get-saved-quotes", async (req, res) => {
     res.status(500).json({ message: "Internal server error" });
   }
 });
+
+app.delete('/api/delete-user', async (req, res) => {
+  console.log('Delete request received:', req.query);
+  const username = req.query.username;
+  
+  if (!username) {
+    console.log('No username provided in query');
+    return res.status(400).json({ message: 'Username is required' });
+  }
+
+  try {
+    console.log('Attempting to delete user:', username);
+    const deletedUser = await User.findOneAndDelete({ username });
+    
+    if (!deletedUser) {
+      console.log('User not found:', username);
+      return res.status(404).json({ message: 'User not found' });
+    }
+    
+    console.log('User deleted successfully:', username);
+    res.json({ message: 'User deleted successfully' });
+  } catch (error) {
+    console.error("Error deleting user:", error);
+    res.status(500).json({ message: "Internal server error", error: error.message });
+  }
+});
+
 
 app.use((err, req, res, next) => {
   console.error(" Unhandled error:", err.stack);

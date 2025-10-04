@@ -37,4 +37,17 @@ $button-font-size: 16px;
     font-size: $button-font-size;
     font-family: $button-font-family;
   }
+  .delete-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color:rgb(129, 67, 67);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: $button-font-size;
+    font-family: $button-font-family;
+  }
 }
