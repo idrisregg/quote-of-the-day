@@ -30,7 +30,7 @@ const Quotes = () => {
       return;
     }
     try {
-      const response = await fetch("http://localhost:5100/api/save-quote", {
+      const response = await fetch("/api/save-quote", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username: user.username, quote }),
