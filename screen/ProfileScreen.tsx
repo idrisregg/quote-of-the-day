@@ -10,7 +10,7 @@ function ProfileScreen() {
   useEffect(() => {
     document.title = "Profile";
     if (user.username !== "Guest") {
-      fetch(`/api/get-saved-quotes?username=${user.username}`)
+      fetch(`http://localhost:5100/api/get-saved-quotes?username=${user.username}`)
         .then(res => res.json())
         .then(data => setSavedQuotes(data.savedQuotes || []))
         .catch(() => setSavedQuotes([]));
