@@ -10,7 +10,7 @@ function ProfileScreen() {
   useEffect(() => {
     document.title = "Profile";
     if (user.username !== "Guest") {
-      fetch(`http://localhost:5100/api/get-saved-quotes?username=${user.username}`)
+      fetch(`/api/get-saved-quotes?username=${user.username}`)
         .then(res => res.json())
         .then(data => setSavedQuotes(data.savedQuotes || []))
         .catch(() => setSavedQuotes([]));
@@ -18,7 +18,7 @@ function ProfileScreen() {
   }, [user.username]);
 
   const deleteUser = () => {
-    fetch(`http://localhost:5100/api/delete-user?username=${user.username}`, {
+    fetch(`/api/delete-user?username=${user.username}`, {
         method: 'DELETE',
     })
     .then(res => {
