@@ -20,9 +20,13 @@ Modern UI/UX - Clean, responsive design with intuitive navigation
 Technology Stack
 
 Frontend: React, React Router, SASS(SCSS), TypeScript
+
 Backend: Node.js, Express.js
+
 Database: MongoDB
+
 Authentication: JWT, bcrypt for password hashing
+
 Data Storage: Local JSON file for quotes
 
 Installation & Setup
