@@ -50,9 +50,7 @@ npm install cors
 4. Environment Configuration
 PORT=5000
 MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/appName?retryWrites=true&w=majority
-JWT_SECRET=your_super_secret_jwt_key_here
 
 
-Development Scripts
-npm run start
+## npm run start
 # Runs both frontend and backend concurrently
