@@ -48,35 +48,7 @@ PORT=5000
 MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/appName?retryWrites=true&w=majority
 JWT_SECRET=your_super_secret_jwt_key_here
 
-UI Components
-
-Landing Page: Welcome screen with app overview
-Registration/Login: Clean forms with validation
-Dashboard: Display current quote with Save button
-Profile Page: Displays the Saved Quotes
-
-Configuration Notes
-
-Replace the MongoDB URI with your actual connection string
-Set a strong JWT secret for production environments
-The quotes.json file contains 365 inspirational quotes that cycle daily
-User passwords are securely hashed using bcrypt before storage
 
 Development Scripts
 npm run start
 # Runs both frontend and backend concurrently
-
-Security Features
-
-Password hashing with bcrypt
-JWT authentication tokens
-Protected API routes
-Input validation and sanitization
-CORS configuration
-
-
-    Check the console for error messages
-
-    Verify your MongoDB connection string
-
-    Ensure all environment variables are properly set
