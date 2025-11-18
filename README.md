@@ -5,108 +5,75 @@
 ![profile](https://github.com/user-attachments/assets/243f50ae-e44c-4234-8b76-bc0aaafdabdf)
 
 
-🌟 Daily Quote App - MERN Stack Implementation
+Daily Quote App - MERN Stack Implementation
 
 A beautifully designed MERN stack application that delivers inspirational quotes every 24 hours with user authentication and interaction features.
-🚀 Key Features
 
-    🔐 Secure Authentication System - User registration and login with MongoDB and Express
+Key Features
 
-    📜 Curated Daily Quotes - inspirational quotes that rotate automatically
+Secure Authentication System - User registration and login with MongoDB and Express
+Curated Daily Quotes - inspirational quotes that rotate automatically
+Saving Experience - Save functionality with Quote-specific tracking
+Automatic Updates - New quote delivered every 24 hours
+Modern UI/UX - Clean, responsive design with intuitive navigation
 
-    💖 Saving Experience - Save functionality with Quote-specific tracking
+Technology Stack
 
-    ⏰ Automatic Updates - New quote delivered every 24 hours
+Frontend: React, React Router, SASS(SCSS), TypeScript
+Backend: Node.js, Express.js
+Database: MongoDB
+Authentication: JWT, bcrypt for password hashing
+Data Storage: Local JSON file for quotes
 
-    🎨 Modern UI/UX - Clean, responsive design with intuitive navigation
+Installation & Setup
 
-🛠️ Technology Stack
-
-    Frontend: React, React Router, SASS(SCSS), TypeScript
-
-    Backend: Node.js, Express.js
-
-    Database: MongoDB
-
-    Authentication: JWT, bcrypt for password hashing
-
-    Data Storage: Local JSON file for quotes
-
-📦 Installation & Setup
 Prerequisites
-
-    Node.js (v14 or higher)
-
-    MongoDB Atlas account
-
-    Git
+Node.js (v14 or higher)
+MongoDB Atlas account
+Git
 
 1. Clone the Repository
-bash
 cd daily-quote-app
 
 2. Install Dependencies
-
-
->npm install
-
->npm install express
-
->npm install mongoose
-
->npm install react-router
-
->npm install bcryptjs
-
->npm install cors
+npm install
+npm install express
+npm install mongoose
+npm install react-router
+npm install bcryptjs
+npm install cors
 
 4. Environment Configuration
-
 PORT=5000
-
 MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/appName?retryWrites=true&w=majority
-
 JWT_SECRET=your_super_secret_jwt_key_here
 
-🎨 UI Components
+UI Components
 
-    Landing Page: Welcome screen with app overview
+Landing Page: Welcome screen with app overview
+Registration/Login: Clean forms with validation
+Dashboard: Display current quote with Save button
+Profile Page: Displays the Saved Quotes
 
-    Registration/Login: Clean forms with validation
+Configuration Notes
 
-    Dashboard: Display current quote with Save button
+Replace the MongoDB URI with your actual connection string
+Set a strong JWT secret for production environments
+The quotes.json file contains 365 inspirational quotes that cycle daily
+User passwords are securely hashed using bcrypt before storage
 
-    Profile Page : Displayes the Saved Quotes
+Development Scripts
+npm run start
+# Runs both frontend and backend concurrently
 
-⚙️ Configuration Notes
+Security Features
 
-    Replace the MongoDB URI with your actual connection string
+Password hashing with bcrypt
+JWT authentication tokens
+Protected API routes
+Input validation and sanitization
+CORS configuration
 
-    Set a strong JWT secret for production environments
-
-    The quotes.json file contains 365 inspirational quotes that cycle daily
-
-    User passwords are securely hashed using bcrypt before storage
-
-🚦 Development Scripts
-
-> npm run start
-
-> #Runs both frontend and backend concurrently
-
-🔒 Security Features
-
-    Password hashing with bcrypt
-
-    JWT authentication tokens
-
-    Protected API routes
-
-    Input validation and sanitization
-
-    CORS configuration
-
-If you encounter any issues or have questions:
 
     Check the console for error messages
 
